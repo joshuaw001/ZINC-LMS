@@ -1,7 +1,6 @@
 include("db.php");
 $conn = new mysqli($host, $username, $password, $dbname);
 sql   = "select * from zinc_data;";
-
 $result = mysqi->query($sql);
 
 class User {
