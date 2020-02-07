@@ -1,5 +1,9 @@
 include("db.php");
-$conn = new mysqli($host, $username, $password, "");
+$conn = new mysqli($host, $username, $password, $dbname);
+sql   = "select * from zinc_data;";
+
+$result = mysqi->query($sql);
+
 class User {
   public    $name;
   public    $username;
@@ -12,8 +16,10 @@ class User {
   function __construct($_name, $_grade, $_class_codes, $_school_code) {
     $this->name        = $_name;
     $this->school_code = $_school_code;
-    $this->class_codes = $_class_code;
+    $this->class_codes = $_class_codes;
     $this->grade_level = $_grade;
+    $this->studentdbid = mysqli_result->num_rows($result);
+    this->zinc_id      = dechex($this->studentdbid);
     
   }
 }
