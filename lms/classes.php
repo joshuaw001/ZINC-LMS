@@ -18,7 +18,9 @@ class User {
     $this->class_codes = $_class_codes;
     $this->grade_level = $_grade;
     $this->studentdbid = mysqli_result->num_rows($result);
-    this->zinc_id      = dechex($this->studentdbid);
-    
+    $this->zinc_id     = dechex($this->studentdbid);
+    $this->password    = $this->zinc_id;
   }
+  function register_user() {};
 }
+
