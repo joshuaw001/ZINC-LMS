@@ -18,4 +18,10 @@ function zinc_Question(e) {
         for(j = 0;j < ANSWERS.length; j += 1) {
             Ans[Answers[j].attributes.answerText.value] = parseFloat(ANSWERS[j].textContent)
             ANSWER[j].removeChild()
-        e.innerHTML = "<div id='QuestionID-" + ID + "'>"
+        text    = "<h4> " + Ans{
+        r_a     = repeat(
+        e.innerHTML = "<div id='QuestionID-" + ID + "'>" +
+                      "<h3  id='titleID-"    + ID + "'>" +
+                      "Question " + ID + ": " + TITLE "" +
+                      "</h3>"                            +
+                      
