@@ -1,7 +1,6 @@
-
 - name: Check HTML
         uses:chabad360/htmlproofer@master
-with:
+        with:
           directory: "./public"
           # The directory to scan
           arguments: --allow-missing-href
