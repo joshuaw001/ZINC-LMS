@@ -15,13 +15,18 @@ function zinc_Question(e) {
         TITLE   = attr.QuestionTitle.value
         ANSWERS = querySelectorAll("zinc-answer")
         Ans     = {};
+        text    = "";
         for(j = 0;j < ANSWERS.length; j += 1) {
             Ans[Answers[j].attributes.answerText.value] = parseFloat(ANSWERS[j].textContent)
             ANSWER[j].removeChild()
-        text    = "<h4> " + Ans{
-        r_a     = repeat(
+            text    += "<h4> " + Ans[j] + "</h4>";
+        }
+        r_a     = text.repeat(ANSWERS.length);
         e.innerHTML = "<div id='QuestionID-" + ID + "'>" +
                       "<h3  id='titleID-"    + ID + "'>" +
                       "Question " + ID + ": " + TITLE "" +
                       "</h3>"                            +
-                      
+                      r_a                                +
+                      "</div>"                           ;
+    }
+}
